@@ -13,7 +13,15 @@ def count_char(contents):
 	return unique_dict
 
 def sort_alpha(char_count):
-	 
-	
+	count_list = []
+	for key in char_count:
+		temp_dict = {"char": key, "num": char_count[key]}
+		#print(temp_dict)
+		count_list.append(temp_dict)
+		#print(count_list)
+	count_list.sort(reverse = True, key = sort_on)
+	return count_list
 
+def sort_on(items):
+	return(items["num"])
 	  
